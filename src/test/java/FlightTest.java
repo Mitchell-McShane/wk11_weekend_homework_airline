@@ -1,6 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -64,10 +65,6 @@ public class FlightTest {
         assertEquals(416, flight.remainingSeats());
     }
 
-    @Test
-    public void canAddPassenger(){
-        assertEquals(0, flight.passengerCount());
-    }
 
 
 

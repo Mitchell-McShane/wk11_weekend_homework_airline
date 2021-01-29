@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -61,10 +62,6 @@ public class Flight {
 
     public int passengerCount() {
         return passengers.size();
-    }
-
-    public void addPassenger(Passenger passenger){
-        this.passengers.add(passenger);
     }
 
     public int remainingSeats(){
