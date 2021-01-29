@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class PassengerTest {
 
@@ -37,6 +38,12 @@ public class PassengerTest {
     public void canGetFlight(){
         passenger.setFlight(flight);
         assertEquals(flight, passenger.getFlight());
+    }
+
+    @Test
+    public void canGetSeatNumber(){
+        passenger.setSeatNumber(0);
+        assertNotNull(passenger.getSeatNumber());
     }
 
 }
