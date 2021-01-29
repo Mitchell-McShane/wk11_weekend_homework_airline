@@ -12,15 +12,8 @@ public class Passenger {
         return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getNumberOfBags() {
         return numberOfBags;
     }
 
-    public void setNumberOfBags(int numberOfBags) {
-        this.numberOfBags = numberOfBags;
-    }
 }

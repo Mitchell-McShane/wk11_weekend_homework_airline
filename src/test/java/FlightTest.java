@@ -13,10 +13,12 @@ public class FlightTest {
 
     private Flight flight;
     private Plane plane;
+    private Passenger passenger;
 
     @Before
     public void before(){
         Date date = new GregorianCalendar(2021, Calendar.JANUARY, 29).getTime();
+        passenger = new Passenger("Mitch", 2);
         plane = new Plane(PlaneType.BOEING747);
         flight = new Flight(new ArrayList<>(), plane, "FR756","GLA","EDI", date);
     }
@@ -56,5 +58,17 @@ public class FlightTest {
         Date date = new GregorianCalendar(2021, Calendar.JANUARY, 29).getTime();
         assertEquals(date, flight.getDepartureTime());
     }
+
+    @Test
+    public void hasRemainingSeats(){
+        assertEquals(416, flight.remainingSeats());
+    }
+
+    @Test
+    public void canAddPassenger(){
+        assertEquals(0, flight.passengerCount());
+    }
+
+
 
 }

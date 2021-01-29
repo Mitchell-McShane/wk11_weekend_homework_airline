@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Random;
 import java.util.jar.Attributes;
 
 public class Flight {
@@ -19,6 +21,14 @@ public class Flight {
         this.destination = destination;
         this.departureAirport = departureAirport;
         this.departureTime = departureTime;
+    }
+
+    private ArrayList<Integer> generateRemainingSeatNumbers(){
+        ArrayList<Integer> result = new ArrayList<>();
+        for(int i = 0; i < getCapacity(); i++){
+            result.add(i);
+        }
+        return result;
     }
 
     public ArrayList<Passenger> getPassengers() {
@@ -45,10 +55,20 @@ public class Flight {
         return departureTime;
     }
 
+    public int getCapacity(){
+        return plane.getCapacity();
+    }
+
     public int passengerCount() {
         return passengers.size();
     }
 
+    public void addPassenger(Passenger passenger){
+        this.passengers.add(passenger);
+    }
 
+    public int remainingSeats(){
+        return this.getCapacity() - this.passengerCount();
+    }
 
 }
