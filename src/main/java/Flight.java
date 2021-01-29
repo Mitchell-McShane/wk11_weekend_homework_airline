@@ -41,6 +41,10 @@ public class Flight {
         return departureAirport;
     }
 
+    public Date getDepartureTime(){
+        return departureTime;
+    }
+
     public int passengerCount() {
         return passengers.size();
     }

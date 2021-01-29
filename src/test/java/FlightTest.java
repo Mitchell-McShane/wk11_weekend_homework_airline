@@ -51,4 +51,10 @@ public class FlightTest {
         assertEquals("EDI", flight.getDepartureAirport());
     }
 
+    @Test
+    public void hasDepartureTime(){
+        Date date = new GregorianCalendar(2021, Calendar.JANUARY, 29).getTime();
+        assertEquals(date, flight.getDepartureTime());
+    }
+
 }
