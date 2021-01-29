@@ -1,11 +1,11 @@
-public enum Plane {
+public enum PlaneType {
 
     BOEING747(416, 183500);
 
     private int capacity;
     private int totalWeight;
 
-    Plane(int capacity, int totalWeight){
+    PlaneType(int capacity, int totalWeight){
         this.capacity = capacity;
         this.totalWeight = totalWeight;
     }
