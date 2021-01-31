@@ -24,13 +24,6 @@ public class Flight {
         this.departureTime = departureTime;
     }
 
-    private ArrayList<Integer> generateRemainingSeatNumbers(){
-        ArrayList<Integer> result = new ArrayList<>();
-        for(int i = 0; i < getCapacity(); i++){
-            result.add(i);
-        }
-        return result;
-    }
 
     public ArrayList<Passenger> getPassengers() {
         return new ArrayList<>(passengers);
